@@ -58,20 +58,22 @@ form h3 {
 }
 
 input {
-    min-width: 100px;
     padding: 7px;
     border-radius: 5px;
-    width: 90%;
-    max-width: 300px;
+    width: 60%;
+    max-width: 200px;
     padding: 10px;
     margin: 5px 0;
-    border-radius: 5px;
-    border: none;
+    border: 5px rgb(29, 23, 72);
+    box-shadow: 1px 1px 5px black;
 }
 
+.botao {
+    width: 100px;
+}
 
 .botao:hover {
-    background-color: gray;
+    background-color: rgba(227, 227, 227, 0.884);
 }
 
 footer {
