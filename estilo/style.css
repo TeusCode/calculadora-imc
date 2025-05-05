@@ -61,7 +61,14 @@ input {
     min-width: 100px;
     padding: 7px;
     border-radius: 5px;
+    width: 90%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
 }
+
 
 .botao:hover {
     background-color: gray;
