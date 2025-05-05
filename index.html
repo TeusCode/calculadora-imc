@@ -31,16 +31,51 @@
         <div id="boxform">
             <form action="">
                 <h3>Cálculo IMC:</h3>
-                <label for="ipeso"><input id="ipeso" type="number" placeholder="Seu peso em kg"> </label><br>
-                <label for="ialtura"><input placeholder="Sua alturaem metros" type="number"></label><br>
-                <label for="|"><input id="iresultado" type="number"></label><br>
-                <label for=""><input type="submit" value="Cálcular"></label>
+                <!--Primeiro valor-->
+                <label for="ipeso"><input step="any" id="ipeso" type="number" placeholder="Seu peso em kg"> </label><br>
+                <!--Segundo valor-->
+                <label for="ialtura"><input step="any" id="ialtura" placeholder="Sua altura em metros"
+                        type="number"></label><br>
+                <!--Resultado-->
+                <!--readonly significa somente leitura, o usuário não pode alterar o valor dentro-->
+                <label for=""><input step="0.01" readonly id="iresultado" type="text"></label><br>
+                <!--Botão submite-->
+                <label for=""><input onclick="imc()" type="button" value="Cálcular"></label>
+                <input type="reset" value="Limpar">
 
             </form>
         </div>
 
         <script>
-            let peso = window.document.getElementById('ipeso')
+            function imc() {
+                let peso = window.document.getElementById('ipeso').value;
+
+                let altura = window.document.getElementById('ialtura').value;
+
+                let resultado = peso / altura ** 2;
+
+                if (resultado <= 18.5) {
+                    window.document.getElementById('iresultado').value = "Abaixo do peso";
+                }
+                else if (resultado > 18.5 && resultado <= 24.9) {
+                    window.document.getElementById('iresultado').value = 'Peso normal'
+                }
+                else if (resultado >= 25 && resultado <= 29.9) {
+                    window.document.getElementById('iresultado').value = 'Sobrepeso'
+                }
+                else if (resultado >= 30 && resultado <= 34.9) {
+                    window.document.getElementById('iresultado').value = 'Obesidade Grau 1'
+                }
+                else if (resultado >= 35 && resultado <= 39, 9) {
+                    window.document.getElementById('iresultado').value = 'Obesidade Grau 2'
+                }
+                else if (resultado >= 40) {
+                    window.document.getElementById('iresultado').value = 'Obesidade Grau 3'
+                }
+
+            }
+
+
         </script>
     </main>
 
