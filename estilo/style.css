@@ -62,3 +62,26 @@ input {
     padding: 7px;
     border-radius: 5px;
 }
+
+.botao:hover {
+    background-color: gray;
+}
+
+footer {
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.349);
+}
+
+footer #rodape {
+    margin: auto;
+    width: 80%;
+    background-color: rgb(95, 76, 243);
+    box-shadow: 10px 10px 0px rgb(29, 23, 72);
+    padding: 25px;
+    color: white;
+    border-radius: 0px 20px
+}

@@ -13,15 +13,14 @@
         <h1>Calculadora de IMC</h1>
         <div id="conteudo">
             <h2>O que é IMC?</h2>
-            <p>O IMC, significa Índice de massa Corporea, é um cálculo que avalia se uma pessoa está dentro do peso
-                ideal
-                para sua altura de forma proporcional</p>
-            <h2>Porque cálcular o IMC?</h2>
+            <p>IMC significa Índice de Massa Corporal. É um cálculo que avalia se uma pessoa está dentro do peso ideal
+                para sua altura de forma proporcional.</p>
+            <h2>Porque calcular o IMC?</h2>
             <ul>
-                <li>Identificar riscos á saúde;</li>
+                <li>Identificar riscos à saúde;</li>
                 <li>Orientar dieta e estilo de vida;</li>
                 <li>Monitorar a evolução a saúde;</li>
-                <li>Avaliação inicial em exames de saúde.</li>
+                <li>Avaliação inicial em exames médicos.</li>
             </ul>
         </div>
 
@@ -32,16 +31,17 @@
             <form action="">
                 <h3>Cálculo IMC:</h3>
                 <!--Primeiro valor-->
-                <label for="ipeso"><input step="any" id="ipeso" type="number" placeholder="Seu peso em kg"> </label><br>
+                <label for="ipeso"><input required step="any" id="ipeso" type="number" placeholder="Seu peso em kg">
+                </label><br>
                 <!--Segundo valor-->
-                <label for="ialtura"><input step="any" id="ialtura" placeholder="Sua altura em metros"
+                <label for="ialtura"><input requerid step="any" id="ialtura" placeholder="Sua altura em metros"
                         type="number"></label><br>
                 <!--Resultado-->
                 <!--readonly significa somente leitura, o usuário não pode alterar o valor dentro-->
                 <label for=""><input step="0.01" readonly id="iresultado" type="text"></label><br>
-                <!--Botão submite-->
-                <label for=""><input onclick="imc()" type="button" value="Cálcular"></label>
-                <input type="reset" value="Limpar">
+                <!--Botão Calcular-->
+                <label for=""><input class="botao" onclick="imc()" type="button" value="Cálcular"></label>
+                <input class="botao" type="reset" value="Limpar">
 
             </form>
         </div>
@@ -54,7 +54,7 @@
 
                 let resultado = peso / altura ** 2;
 
-                if (resultado <= 18.5) {
+                if (resultado <= 18.5 && resultado > 0) {
                     window.document.getElementById('iresultado').value = "Abaixo do peso";
                 }
                 else if (resultado > 18.5 && resultado <= 24.9) {
@@ -66,18 +66,29 @@
                 else if (resultado >= 30 && resultado <= 34.9) {
                     window.document.getElementById('iresultado').value = 'Obesidade Grau 1'
                 }
-                else if (resultado >= 35 && resultado <= 39, 9) {
+                else if (resultado >= 35 && resultado <= 39.9) {
                     window.document.getElementById('iresultado').value = 'Obesidade Grau 2'
                 }
                 else if (resultado >= 40) {
                     window.document.getElementById('iresultado').value = 'Obesidade Grau 3'
                 }
 
+
             }
 
 
         </script>
     </main>
+    <br>
+    <footer>
+        <div id="rodape">
+            <p>Site desenvolvido por: <strong>Mateus da Silva Vilaça</strong> | <strong>Desenvolvedor Iniciante</strong>
+                | <strong>GitHub:
+                    <a href="https://github.com/TeusCode" target="_blank">TeusCode</a></strong></p>
+            <p>Site criado apenas para fins educacionais</p>
+            <p>Versão: 2.0</p>
+        </div>
+    </footer>
 
 
 
